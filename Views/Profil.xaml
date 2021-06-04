@@ -1,0 +1,31 @@
+﻿<Window x:Class="WPF_emrac_connexion.Views.Profil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_emrac_connexion.Views"
+        mc:Ignorable="d"
+        Title="Profil" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#005a9e" Margin="0,75,-0.4,25" Grid.RowSpan="3">
+            <Label Content="Profil" Foreground="White" FontWeight="Bold" FontSize="24"  Margin="387,4,331,266.2"/>
+            <Button x:Name="BoutonRetour" Content="Retour" Margin="665,269,25,23" Height="28" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14"/>
+            <Button x:Name="BoutonModifInfos" Content="Modifier les infos" Margin="309,212,301,61" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14"/>
+            <Label x:Name="Pseudo" Content="Pseudo" HorizontalAlignment="Left" Margin="231,66,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <Label Content="Systeme : " HorizontalAlignment="Left" Margin="618,4,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+            <ToggleButton Margin="710,8,8,282" Content="SOMBRE" />
+            <TextBlock x:Name="TextBlockImage" HorizontalAlignment="Left" Margin="65,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="116" Width="108" Background="White"/>
+            <Label x:Name="Nom" Content="Nom : " HorizontalAlignment="Left" Margin="224,118,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <Label x:Name="Prenom" Content="Prenom : " HorizontalAlignment="Left" Margin="224,150,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <Label x:Name="Mail" Content="Mail : " HorizontalAlignment="Left" Margin="500,118,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16"/>
+            <Label x:Name="MotDePasse" Content="Mot de passe : " HorizontalAlignment="Left" Margin="500,150,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold" FontSize="16"/>
+        </Grid>
+        <Image x:Name="logo_patte_ours" HorizontalAlignment="Left" Height="62" Margin="292,6,0,0" VerticalAlignment="Top" Width="76" Source="logo-emrac2.png"/>
+        <Image x:Name="logo_emrac" HorizontalAlignment="Left" Height="100" Margin="344,-7,0,0" VerticalAlignment="Top" Width="257" Source="01.png" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
