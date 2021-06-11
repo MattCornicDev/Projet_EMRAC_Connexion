@@ -137,5 +137,14 @@
     <Resource Include="Views\01.png" />
     <Resource Include="Views\logo-emrac2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Deconnexion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Groupe.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
