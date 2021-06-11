@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_emrac_connexion.ViewModels;
 
 namespace WPF_emrac_connexion.Views
 {
@@ -22,6 +23,7 @@ namespace WPF_emrac_connexion.Views
         public Inscription()
         {
             InitializeComponent();
+            DataContext = new InscriptionViewModel();
         }
     }
 }

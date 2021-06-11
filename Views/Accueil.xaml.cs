@@ -24,7 +24,7 @@ namespace WPF_emrac_connexion
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new AccueilViewModel();
+            DataContext = new AccueilViewModel(this);
         }
     }
 }

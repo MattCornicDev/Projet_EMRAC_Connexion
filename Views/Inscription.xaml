@@ -14,15 +14,21 @@
         </Grid.RowDefinitions>
         <Grid Background="#005a9e" Margin="0,75,-0.4,32.8" Grid.RowSpan="3">
             <Label Content="Création de votre profil" Foreground="White" FontWeight="Bold" FontSize="24"  Margin="269,10,239.6,214.4"/>
-            <TextBox x:Name="TextBoxPrenom" Height="23" TextWrapping="Wrap" Text="Prenom" Margin="34,223,426,66.2" FontWeight="Bold" Foreground="#FF979797"/>
-            <TextBox x:Name="TextBoxPseudo" Height="23" TextWrapping="Wrap" Text="Pseudo" Margin="34,126,426,163.2" FontWeight="Bold" Foreground="#FF969696"/>
-            <TextBox x:Name="TextBoxNom" Height="23" TextWrapping="Wrap" Text="Nom" Margin="34,175,426,114.2" FontWeight="Bold" Foreground="#FF969696"/>
-            <Button x:Name="BoutonInscription" Content="Inscription" Margin="349,271,340,13.2" Height="28" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14"/>
-            <TextBox x:Name="TextBoxMail1" Height="23" TextWrapping="Wrap" Text="Mail" Margin="34,75,426,214.2" FontWeight="Bold" Foreground="#FF979797"/>
-            <TextBox x:Name="TextBoxMP" Height="23" TextWrapping="Wrap" Text="Mot de passe" Margin="419,75,41,214.2" FontWeight="Bold" Foreground="#FF979797"/>
-            <TextBox x:Name="TextBoxConfirmMP" Height="23" TextWrapping="Wrap" Text="Confirmer Mot de passe" Margin="419,126,41,163.2" FontWeight="Bold" Foreground="#FF979797"/>
+            <TextBox x:Name="TextBoxPrenom" Height="23" TextWrapping="Wrap" Text="{Binding Path=Prenom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="34,223,426,66.2" FontWeight="Bold" Foreground="#FF979797"/>
+            <TextBox x:Name="TextBoxPseudo" Height="23" TextWrapping="Wrap" Text="{Binding Path=Pseudo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="34,126,426,163.2" FontWeight="Bold" Foreground="#FF969696"/>
+            <TextBox x:Name="TextBoxNom" Height="23" TextWrapping="Wrap" Text="{Binding Path=Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="34,175,426,114.2" FontWeight="Bold" Foreground="#FF969696"/>
+            <Button x:Name="BoutonInscription" Content="Inscription" Margin="349,271,340,13.2" Height="28" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14" Command="{Binding CommandeInscription}"/>
+            <TextBox x:Name="TextBoxMail1" Height="23" TextWrapping="Wrap" Text="{Binding Path=Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="34,75,426.4,213.2" FontWeight="Bold" Foreground="#FF979797"/>
+            <TextBox x:Name="TextBoxMP" Height="23" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="419,75,41,214.2" FontWeight="Bold" Foreground="#FF979797"/>
+            <TextBox x:Name="TextBoxConfirmMP" Height="23" TextWrapping="Wrap" Text="{Binding Path=PasswordConfirme, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="419,126,41,163.2" FontWeight="Bold" Foreground="#FF979797"/>
             <Label Content="Ma photo de profil :" Foreground="White" FontWeight="Bold" FontSize="18"  Margin="419,165,191,110.2"/>
             <Button x:Name="BoutonSelectPhoto" Content="Selectionner une photo" Margin="491,207,119,66.2" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Email" HorizontalAlignment="Left" Margin="159,49,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" />
+            <Label Content="Pseudo" HorizontalAlignment="Left" Margin="159,95,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" />
+            <Label Content="Nom" HorizontalAlignment="Left" Margin="159,144,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" />
+            <Label Content="Prenom" HorizontalAlignment="Left" Margin="159,192,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" />
+            <Label Content="Mot de passe" HorizontalAlignment="Left" Margin="520,49,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" />
+            <Label Content="Confirme mot de passe" HorizontalAlignment="Left" Margin="520,97,0,0" VerticalAlignment="Top" Foreground="#FFFFFF" />
         </Grid>
         <Image x:Name="logo_patte_ours" HorizontalAlignment="Left" Height="62" Margin="292,6,0,0" VerticalAlignment="Top" Width="76" Source="logo-emrac2.png"/>
         <Image x:Name="logo_emrac" HorizontalAlignment="Left" Height="100" Margin="344,-7,0,0" VerticalAlignment="Top" Width="257" Source="01.png" Grid.RowSpan="2"/>
