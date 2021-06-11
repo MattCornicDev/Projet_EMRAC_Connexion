@@ -10,11 +10,11 @@
         <Grid>
             <StackPanel x:Name="fond" HorizontalAlignment="Left" Height="237" Margin="0,96,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF005A9E">
                 <Label Content="ACCUEIL" Margin="347,0,341.6,0" Foreground="White" FontWeight="Bold" FontSize="24"/>
-                <TextBox x:Name="TextBoxMail" Height="23" TextWrapping="Wrap" Text="Mail" Margin="200,20,200,0" FontWeight="Bold" Foreground="#FF979797" Cursor="No"/>
-                <TextBox x:Name="TextBoxMDP" Height="23" TextWrapping="Wrap" Text="Mot de passe" Margin="200,20,199.6,0" FontWeight="Bold" Foreground="#FF969696"/>
+                <TextBox x:Name="TextBoxMail" Height="23" TextWrapping="Wrap" Text="{Binding Path=Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="200,20,200,0" FontWeight="Bold" Foreground="#FF979797" Cursor="No"/>
+                <TextBox x:Name="TextBoxMDP" Height="23" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="200,20,199.6,0" FontWeight="Bold" Foreground="#FF969696"/>
                 <Label x:Name="MdpOublie" Content="Mot de passe oublié ?" Foreground="White" Margin="198,0,201.6,0"/>
-                <Button x:Name="BoutonConnexion" Content="Connexion" Margin="347,0,341.6,0" Height="27" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14"/>
-                <Button x:Name="BoutonNonInscrit" Content="Non inscrit" Margin="489,10,199.6,0" Height="27" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="BoutonConnexion" Content="Connexion" Margin="347,0,341.6,0" Height="27" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14" Command="{Binding CommandeConnexion}"/>
+                <Button x:Name="BoutonNonInscrit" Content="Non inscrit" Margin="489,10,199.6,0" Height="27" Foreground="#FF005A9E" FontWeight="Bold" FontSize="14" Command="{Binding CommandeNonInscrit}"/>
             </StackPanel>
             <Label Content="Systeme : " HorizontalAlignment="Left" Margin="616,102,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
             <Image x:Name="logo_patte_ours" HorizontalAlignment="Left" Height="62" Margin="292,19,0,0" VerticalAlignment="Top" Width="76" Source="/WPF-emrac-connexion;component/logo-emrac2.png"/>

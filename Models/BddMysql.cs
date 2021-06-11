@@ -194,11 +194,11 @@ namespace WPF_emrac_connexion
             return resultat;
         }
 
-        public List<string> AvoirListe(string table, string nom)
+        public List<string> AvoirListe(string table, string email)
         {
             List<string> resultat = new List<string>();
 
-            String requete = string.Format("select * from {0} WHERE Nom = {1} ", table, nom);
+            String requete = string.Format("select * from {0} WHERE email = {1} ", table, email);
             MySqlDataReader reader = RequeteSql(requete);
             if (reader != null)
             {

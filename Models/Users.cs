@@ -41,5 +41,11 @@ namespace WPF_emrac_connexion.Models
             Password = pass;
             Email = mail;
         }
+
+        public Users(string pass, string mail)
+        {
+            Password = pass;
+            Email = mail;
+        }
     }
 }

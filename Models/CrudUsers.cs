@@ -46,7 +46,7 @@ namespace WPF_emrac_connexion.Models
         public bool supprimerUser(Users userASupprimer)
         {
             bool EstOK = false;
-            BddMysql Bdd = new BddMysql("localhost", 3306, "gestioncourse", "root", "");
+            BddMysql Bdd = new BddMysql("localhost", 3306, "xamaringestioncourse", "root", "");
             bool OuvertureOk = Bdd.OuvrirConnexion();
 
             // préparation de la requête SQL
@@ -63,7 +63,7 @@ namespace WPF_emrac_connexion.Models
         public void UpdateUser(Users userAUpdate)
         {
             bool EstOK = false;
-            BddMysql Bdd = new BddMysql("localhost", 3306, "gestioncourse", "root", "");
+            BddMysql Bdd = new BddMysql("localhost", 3306, "xamaringestioncourse", "root", "");
             bool OuvertureOk = Bdd.OuvrirConnexion();
 
             // préparation de la requête SQL
@@ -86,31 +86,18 @@ namespace WPF_emrac_connexion.Models
 
 
 
-        public List<string> lireUser(Users userALire)
+        public List<string> LireUser(Users userALire)
         {
             List<string> resultat = new List<string>();
-            String requete = string.Format("SELECT * FROM users WHERE idusers ={0}", userALire.IdUsers);
-            BddMysql bdd = new BddMysql("localhost", 3306, "xamaringestioncourse", "root", "");
-            MySqlDataReader reader = bdd.RequeteSql(requete);
-            if (reader != null)
-            {
-                if (reader.HasRows)
-                {
-                    while (reader.Read())
-                    {
-                        int nbrColonnes = reader.FieldCount;
-                        string valeur = "";
-                        for (int i = 0; i < nbrColonnes; i++)
-                        {
-                            valeur += reader.GetString(i) + "/";
-                        }
-                        resultat.Add(valeur);
-                    }
-                }
-            }
-            reader.Close();
-            return resultat;
+            BddMysql Bdd = new BddMysql("localhost", 3306, "xamaringestioncourse", "root", "");
+            bool OuvertureOk = Bdd.OuvrirConnexion();
 
+            if (OuvertureOk == true)
+            {
+                resultat = Bdd.AvoirListe("users", userALire.Email);
+                
+            }
+            return resultat;
         }
     }
 }

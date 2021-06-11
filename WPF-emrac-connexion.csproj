@@ -56,6 +56,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\Command.cs" />
+    <Compile Include="ViewModels\InscriptionViewModel.cs" />
     <Compile Include="Views\Appli.xaml.cs">
       <DependentUpon>Appli.xaml</DependentUpon>
     </Compile>
