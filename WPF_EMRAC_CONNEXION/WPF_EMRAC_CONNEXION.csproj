@@ -55,6 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Groupe.xaml.cs">
+      <DependentUpon>Groupe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Utilisateurs.xaml.cs">
+      <DependentUpon>Utilisateurs.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\Groupe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\ModifierProfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -102,6 +112,10 @@
       <DependentUpon>Accueil.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Utilisateurs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -136,6 +150,15 @@
   <ItemGroup>
     <Resource Include="Views\01.png" />
     <Resource Include="Views\logo-emrac2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Deconnexion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Groupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
