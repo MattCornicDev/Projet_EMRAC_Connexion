@@ -1,0 +1,56 @@
+﻿<Window x:Class="WPF_EMRAC_CONNEXION.Views.Utilisateurs"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_EMRAC_CONNEXION.Views"
+        mc:Ignorable="d"
+        Title="Utilisateurs" Height="450" Width="800">
+    <Grid Background="#FF005A9E" Margin="0,0,-6,0">
+        <StackPanel x:Name="fond" HorizontalAlignment="Left" Height="286" Margin="0,50,0,0" VerticalAlignment="Top" Width="631" Background="White">
+
+            <Label Content="ACCUEIL" Margin="347,0,341.6,0" Foreground="White" FontWeight="Bold" FontSize="24"/>
+            <Label x:Name="MdpOublie" Content="Mot de passe oublié ?" Foreground="White" Margin="198,0,201.6,0"/>
+
+        </StackPanel>
+        <Label HorizontalAlignment="Left" Margin="616,102,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
+        <TextBlock x:Name="TextBlockImage" HorizontalAlignment="Left" Margin="9,6,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="33" Background="White"/>
+        <Label x:Name="Pseudo" Content="Pseudo" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Messagerie" HorizontalAlignment="Center" Margin="374,10,346,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="White"/>
+        <Image x:Name="Deconnexion" HorizontalAlignment="Left" Height="26" Margin="758,11,0,0" VerticalAlignment="Top" Width="26" Source="Deconnexion.png"/>
+        <Image x:Name="Utilisateur" HorizontalAlignment="Left" Height="43" Margin="705,10,0,0" VerticalAlignment="Top" Width="43" Source="Groupe.png"/>
+        <TextBox x:Name="TextBoxMessage" HorizontalAlignment="Left" Height="65" Margin="10,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="535"/>
+        <Image x:Name="Plus" HorizontalAlignment="Left" Height="31" Margin="578,348,0,0" VerticalAlignment="Top" Width="31" Source="Plus.png"/>
+        <Button x:Name="BoutonEnvoyer" Content="Envoyer" HorizontalAlignment="Left" Margin="554,388,0,0" Padding="0,0,0,2" VerticalAlignment="Top" Width="75" FontWeight="Bold" Background="{x:Null}" BorderBrush="White" Foreground="White" Height="23"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="361" Margin="636,50,0,0" Stroke="Black" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="TextBlockGroupe" HorizontalAlignment="Left" Margin="643,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="150" Width="145" Background="#FF005A9E"><InlineUIContainer>
+                <Label Content="Mes groupes" Foreground="White" Margin="0, 0" Width="116" FontWeight="Bold" FontSize="14"/>
+            </InlineUIContainer><InlineUIContainer>
+                <Separator Height="9" Margin="0,0" Width="89" RenderTransformOrigin="0.5,0.5" Background="White">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-1.32"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-1.152"/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+            </InlineUIContainer></TextBlock>
+        <TextBlock x:Name="TextBlockUtilisateurs" HorizontalAlignment="Left" Margin="643,213,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="188" Width="145" Background="#FF005A9E"><InlineUIContainer>
+                <Label Content="Utilisateurs" Foreground="White" Margin="0, 0" Width="83" FontWeight="Bold" FontSize="14"/>
+            </InlineUIContainer><InlineUIContainer>
+                <Separator Height="9" Margin="0,0" Width="89" RenderTransformOrigin="0.5,0.5" Background="White">
+                    <Separator.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleX="-1.32"/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-1.152"/>
+                        </TransformGroup>
+                    </Separator.RenderTransform>
+                </Separator>
+            </InlineUIContainer></TextBlock>
+
+    </Grid>
+</Window>
